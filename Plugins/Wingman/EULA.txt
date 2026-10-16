@@ -1,0 +1,251 @@
+================================================================
+  Loco AI - End-User License Agreement
+  Copyright (c) 2026 LocoDev. All rights reserved.
+================================================================
+
+This is a plain-English summary of the agreement you accept by
+installing or using Loco AI ("the Plugin"). The full legal terms
+live at https://ai.locodev.dev/terms - that document is the
+canonical version and applies if anything below is unclear.
+
+----------------------------------------------------------------
+ 1. WHAT YOU CAN DO
+----------------------------------------------------------------
+
+LocoDev grants you a free, non-exclusive, worldwide license to:
+
+  (a) install the Plugin in any Unreal Engine project you have
+      legitimate access to (personal, educational, or commercial);
+
+  (b) use the Plugin to author Blueprints, widgets, materials,
+      and other content as part of your own project;
+
+  (c) ship the resulting Blueprints and assets in your own
+      games on any platform - Steam, the Epic Games Store,
+      console stores, mobile, itch.io, etc. - free or paid,
+      with no royalties owed to LocoDev;
+
+  (d) use the Plugin in client work, contract projects, and
+      studio production.
+
+The output you produce with the Plugin is yours. We don't
+claim any ownership over what the Plugin generates for you.
+
+----------------------------------------------------------------
+ 2. WHAT YOU CAN'T DO
+----------------------------------------------------------------
+
+  (a) Reverse-engineer, decompile, disassemble, or de-obfuscate
+      the Plugin's compiled binaries.
+
+  (b) Resell, sublicense, or redistribute the Plugin itself
+      (the .zip / installed folder) - either standalone or
+      bundled inside another paid product - without a written
+      agreement with LocoDev. (Sharing what the Plugin BUILT
+      for you is fine; sharing the Plugin is not.)
+
+  (c) Remove or alter copyright notices, the LocoDev brand,
+      Plugin identifiers, or this license.
+
+  (d) Use the Plugin to generate content that violates anyone
+      else's rights - copyright, trademark, privacy, or
+      otherwise.
+
+  (e) Use the Plugin to harass, dox, or generate hateful
+      content. Accounts that do will be terminated.
+
+  (f) Run multiple accounts to bypass the Free plan's monthly
+      prompt cap.
+
+----------------------------------------------------------------
+ 3. BYOK ("Bring Your Own Key")
+----------------------------------------------------------------
+
+The Plugin connects to AI providers using credentials YOU
+supply. Supported backends as of v0.15.x:
+
+  - Anthropic Direct (API key)
+  - OpenAI Direct (API key)
+  - Google Gemini (API key)
+  - Groq (API key, free tier available)
+  - OpenRouter, DeepSeek (API key, per-token billing)
+  - Claude Code CLI (subscription auth: Claude Pro / Max)
+  - OpenAI Codex CLI (subscription auth: ChatGPT Plus / Pro)
+  - Ollama (local model, no network)
+  - Custom API endpoint (OpenAI Chat Completions-compatible)
+
+Calls go directly from your machine to that provider.
+
+  - You agree to your provider's terms of service.
+  - You pay your provider directly. We never see your tokens
+    and don't charge a markup.
+  - Whatever your provider charges, blocks, or rate-limits
+    is between you and them.
+
+----------------------------------------------------------------
+ 4. AI OUTPUT
+----------------------------------------------------------------
+
+The Plugin generates Blueprint nodes, components, and code
+based on your prompts. AI output is not perfect.
+
+YOU ARE RESPONSIBLE for reviewing the Plugin's output before
+committing it to your project, shipping a build, or relying
+on it in a live game. We don't warrant that output is correct,
+safe, performant, or free of bugs.
+
+We're building guardrails (compile checks, graph audits,
+template-based generation, beginner-actor audits) to make
+output reliable, and we treat real bugs as our problem to
+fix. But the final "is this good enough to ship?" call is
+yours.
+
+----------------------------------------------------------------
+ 5. NO WARRANTY
+----------------------------------------------------------------
+
+The Plugin is provided "AS IS", without warranty of any kind,
+express or implied. To the extent permitted by law, LocoDev
+disclaims all warranties of merchantability, fitness for a
+particular purpose, non-infringement, and uninterrupted use.
+
+Brazilian consumers: nothing in this section limits your rights
+under Lei 8.078/1990 (Codigo de Defesa do Consumidor). Where the
+CDC requires us to provide warranties or assume responsibility,
+we do.
+
+EU / UK consumers: nothing here limits warranties that cannot be
+excluded under your local consumer-protection law (e.g. UK
+Consumer Rights Act 2015, EU Directive 2011/83/EU).
+
+----------------------------------------------------------------
+ 6. LIMITATION OF LIABILITY
+----------------------------------------------------------------
+
+To the extent permitted by law, LocoDev's total liability for
+any claim arising from your use of the Plugin is limited to
+the greater of (a) the amount you paid LocoDev in the 12
+months before the claim, or (b) USD 50.
+
+We are not liable for lost profits, lost data, or
+consequential damages.
+
+Brazilian consumers: this cap does not apply where prohibited
+by Lei 8.078/1990 (CDC), in particular Articles 25, 51 and 54.
+Mandatory liability for defective service, including moral
+damages where applicable, remains in effect.
+
+EU / UK consumers: nothing here limits liability that cannot
+be excluded under your local consumer-protection law.
+
+----------------------------------------------------------------
+ 7. PRIVACY & TELEMETRY
+----------------------------------------------------------------
+
+The Plugin collects two categories of data, both auditable
+in Settings > Privacy:
+
+  (a) Anonymous usage telemetry (ON by default): tool names
+      that ran, success / failure, plugin + engine version,
+      crash stack traces. Does NOT include prompts, AI
+      responses, asset names, or anything project-identifying.
+      Turn off: Settings > Privacy > Anonymous telemetry > Off.
+
+  (a-detailed) Detailed diagnostics (OFF by default, new in
+      v0.15.5): richer plumbing-level events to catch silent
+      bugs (router decisions, compile results, memory-fetch
+      timeouts, AI hallucinated node names, audit findings,
+      token/cost ledger). Includes Blueprint names and
+      /Game/... asset paths from your project. Does NOT
+      include prompt text, AI response text, account email,
+      API keys, or OS user-folder paths (those are stripped
+      client-side before send). On first launch after
+      updating to v0.15.5, a consent dialog asks whether to
+      enable. Togglable any time at Settings > Privacy >
+      Detailed diagnostics. Full disclosure at
+      https://ai.locodev.dev/privacy/telemetry.
+
+  (b) Prompt sharing (OFF by default): prompt text plus the
+      AI's response. Collected ONLY if you explicitly opt in
+      via Settings > Privacy > Share prompt examples. Helps
+      us reproduce bugs faster. Togglable any time; previously
+      shared prompts can be wiped via the Delete-shared-prompts
+      button in the same panel.
+
+  (c) Bug reports (per-report consent): Settings > Help >
+      Report a bug opens a form where you can submit a
+      description plus optional bundles (recent log tail,
+      last 10 chat turns, viewport screenshot, contact email).
+      Each report is its own conscious decision — preview
+      pane shows the exact redacted payload before send.
+      No "always send bug reports" toggle. Stored in
+      loco_bug_reports, INSERT-only anon RLS.
+
+The Plugin also runs two opt-in remote surfaces that default
+OFF:
+
+  - Live Dashboard presence (Settings > Live Dashboard):
+    publishes project name, engine version, plugin version,
+    and last-seen timestamp to your own dashboard at
+    ai.locodev.dev/dashboard/live. No prompts or content.
+
+  - Live Dashboard remote commands: lets the dashboard send a
+    small whitelist of safe commands (health_check,
+    take_screenshot, read_logs, get_project_status, create_task).
+    Queue-only by default. Auto-submit is a separate Local-Dev
+    toggle; remote tasks run under the Remote-task permission
+    floor you choose in Settings.
+
+  - Claude Code Bridge (Settings > Bridge): exposes the
+    plugin's MCP endpoint on 127.0.0.1 with a per-launch token
+    so an external Claude Code workspace session can call the
+    same Blueprint tools. Token-gated; 127.0.0.1-only; never
+    reachable from the LAN.
+
+Full privacy policy: https://ai.locodev.dev/privacy
+
+----------------------------------------------------------------
+ 8. TERMINATION
+----------------------------------------------------------------
+
+You can stop using the Plugin and delete it any time. We can
+suspend or terminate access for accounts that violate this
+agreement, particularly Section 2. We'll usually give you a
+heads-up before terminating, except where the violation is
+severe enough that warning would cause harm.
+
+----------------------------------------------------------------
+ 9. GOVERNING LAW
+----------------------------------------------------------------
+
+This agreement is governed by the laws of Brazil. Disputes
+that cannot be resolved by talking will be heard in the
+courts of Sao Paulo, SP, Brazil. If you are a consumer in
+another jurisdiction with stricter consumer-protection laws,
+those still apply to you.
+
+----------------------------------------------------------------
+ 10. ACCEPTANCE
+----------------------------------------------------------------
+
+Installing, copying, or using the Plugin (in whole or in part)
+means you accept this agreement. If you don't agree, don't
+install it - and delete any copies you've received.
+
+================================================================
+
+Questions or feedback?
+
+  Discord:   https://discord.gg/ZB7SMbbxQz   (English)
+             https://discord.gg/px7MtACkza   (Portuguese)
+  Support:   support@locodev.dev
+  Security:  security@locodev.dev   (responsible disclosure)
+  Legal:     legal@locodev.dev
+  Privacy:   privacy@locodev.dev
+  Docs:      https://ai.locodev.dev/docs
+  Terms:     https://ai.locodev.dev/terms
+  Privacy:   https://ai.locodev.dev/privacy
+
+================================================================
+                       LocoDev (c) 2026
+================================================================

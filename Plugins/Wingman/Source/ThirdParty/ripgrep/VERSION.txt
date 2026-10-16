@@ -1,0 +1,14 @@
+ripgrep (rg.exe) — bundled with LocoHelperAI
+
+Source:  https://github.com/BurntSushi/ripgrep/releases
+License: MIT OR Unlicense (see LICENSE-MIT and UNLICENSE in this folder)
+Author:  Andrew Gallant (BurntSushi)
+
+The bundled binary in Win64/rg.exe is the official upstream ripgrep release
+for x86_64-pc-windows-msvc. To update to a newer version, download the latest
+release from the URL above and replace Win64/rg.exe.
+
+LocoHelperAI invokes this binary from FCodeSearchTool / FRipgrepRunner to
+expose grep, find_symbol, find_references, and read_file MCP tools to AI agents.
+ripgrep is unmodified from upstream and used as a separate executable via
+subprocess invocation — no linking, no derivative work.

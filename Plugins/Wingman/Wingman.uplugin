@@ -1,0 +1,119 @@
+{
+    "FileVersion":  3,
+    "Version":  1,
+    "VersionName":  "0.19.8",
+    "FriendlyName":  "Wingman",
+    "Description":  "AI Blueprint authoring for UE5. Describe gameplay in plain English, get clean working graphs. 6 gameplay templates, smart resolver, custom rules, asset library. BYOK, works with Anthropic API, OpenAI API, Groq, DeepSeek, OpenRouter, Gemini, Claude Pro/Max (via Claude CLI), or ChatGPT Plus/Pro (via Codex CLI). Anonymous opt-out usage telemetry helps improve the plugin.",
+    "Category":  "Editor",
+    "CreatedBy":  "LocoDev",
+    "CreatedByURL":  "https://ai.locodev.dev",
+    "DocsURL":  "https://ai.locodev.dev/docs",
+    "MarketplaceURL":  "",
+    "SupportURL":  "https://ai.locodev.dev/contact",
+    "CanContainContent":  false,
+    "IsBetaVersion":  false,
+    "Installed":  true,
+    "EnabledByDefault":  true,
+    "Modules":  [
+                    {
+                        "Name":  "Wingman",
+                        "Type":  "EditorNoCommandlet",
+                        "LoadingPhase":  "PostEngineInit",
+                        "PlatformAllowList":  [
+                                                  "Win64"
+                                              ]
+                    }
+                ],
+    "Plugins":  [
+                    {
+                        "Name":  "PythonScriptPlugin",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "EnhancedInput",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "AudioCapture",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "IKRig",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "AudioModulation",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "Chooser",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "CommonUI",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "ControlRig",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "DataValidation",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "GameplayBehaviors",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "GameplayCameras",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "GeometryScripting",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "Interchange",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "Metasound",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "Niagara",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "PCG",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "PoseSearch",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "SmartObjects",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "StateTree",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "GameplayStateTree",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "Water",
+                        "Enabled":  true
+                    },
+                    {
+                        "Name":  "CaptureManagerEditor",
+                        "Enabled":  true,
+                        "Optional":  true
+                    }
+                ],
+    "EngineVersion":  "5.7.0"
+}

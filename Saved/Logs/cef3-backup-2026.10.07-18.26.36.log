@@ -1,0 +1,39 @@
+[9360:2476:1007/145324.805:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[9360:12064:1007/145324.882:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
+[9360:2476:1007/145324.919:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[8184:3500:1007/145335.933:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-CE03581923A283E2C926F7C646C50254 will be ignored
+[15256:11996:1007/145336.002:WARNING:backend_impl.cc(1568)] Messed up entry found.
+[15256:11996:1007/145336.002:WARNING:backend_impl.cc(1764)] Destroying invalid entry.
+[9360:2476:1007/151939.839:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/151944.841:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/151949.880:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/151954.894:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152105.123:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152110.151:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152115.174:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152120.223:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152125.241:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152130.249:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152135.270:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152140.324:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152145.332:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152150.381:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152155.427:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152200.431:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152205.478:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152210.520:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152215.573:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152225.637:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152230.663:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152235.689:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152240.698:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152315.789:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152556.411:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152601.431:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152606.486:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152611.491:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152616.539:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152621.589:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152626.595:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152631.623:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[9360:2476:1007/152636.678:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0

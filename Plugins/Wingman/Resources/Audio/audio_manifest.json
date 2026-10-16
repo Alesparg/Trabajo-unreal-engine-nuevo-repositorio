@@ -1,0 +1,129 @@
+{
+    "version": 1,
+    "schema_notes": "Catalog of bundled audio assets. The plugin's Audio view reads this to render cards. Each click → pre-fills a chat prompt that tells the AI to import the asset into the user's project using execute_python + loco helpers.",
+    "default_import_folder": "/Game/LocoAI/Audio",
+    "categories": [
+        {
+            "id": "ui",
+            "label": "UI & Feedback",
+            "icon_color": "#c38fd9",
+            "assets": [
+                {
+                    "name": "SFX_UI_Click",
+                    "file": "SFX_UI_Click.wav",
+                    "duration_s": 0.04,
+                    "tags": ["click", "ui", "confirm"],
+                    "description": "Short bright click, great for button press feedback.",
+                    "default_volume": 0.7
+                },
+                {
+                    "name": "SFX_UI_Hover",
+                    "file": "SFX_UI_Hover.wav",
+                    "duration_s": 0.08,
+                    "tags": ["hover", "ui", "soft"],
+                    "description": "Soft mid tone for button hover / focus.",
+                    "default_volume": 0.5
+                },
+                {
+                    "name": "SFX_UI_Confirm",
+                    "file": "SFX_UI_Confirm.wav",
+                    "duration_s": 0.21,
+                    "tags": ["confirm", "ui", "positive"],
+                    "description": "Two-tone positive chime for confirmations / menu advances.",
+                    "default_volume": 0.6
+                }
+            ]
+        },
+        {
+            "id": "pickup",
+            "label": "Pickups & Collectibles",
+            "icon_color": "#d9a458",
+            "assets": [
+                {
+                    "name": "SFX_Coin",
+                    "file": "SFX_Coin.wav",
+                    "duration_s": 0.25,
+                    "tags": ["coin", "pickup", "reward"],
+                    "description": "Classic coin ding. Pairs well with add_pickup_template.",
+                    "default_volume": 0.6
+                },
+                {
+                    "name": "SFX_Pickup",
+                    "file": "SFX_Pickup.wav",
+                    "duration_s": 0.25,
+                    "tags": ["pickup", "item", "sweep"],
+                    "description": "Ascending sweep, generic item pickup.",
+                    "default_volume": 0.6
+                },
+                {
+                    "name": "SFX_LevelUp",
+                    "file": "SFX_LevelUp.wav",
+                    "duration_s": 0.48,
+                    "tags": ["level-up", "milestone", "arpeggio"],
+                    "description": "Ascending 4-note arpeggio for level-up or achievement moments.",
+                    "default_volume": 0.7
+                }
+            ]
+        },
+        {
+            "id": "combat",
+            "label": "Combat & Damage",
+            "icon_color": "#c05757",
+            "assets": [
+                {
+                    "name": "SFX_Hit",
+                    "file": "SFX_Hit.wav",
+                    "duration_s": 0.10,
+                    "tags": ["hit", "impact", "punch"],
+                    "description": "Short punchy impact, generic melee / projectile hit.",
+                    "default_volume": 0.75
+                },
+                {
+                    "name": "SFX_Damage",
+                    "file": "SFX_Damage.wav",
+                    "duration_s": 0.18,
+                    "tags": ["damage", "hurt", "noise"],
+                    "description": "Wide-band hit for character damage / ouch feedback. Pairs with add_damage_template.",
+                    "default_volume": 0.7
+                },
+                {
+                    "name": "SFX_Death",
+                    "file": "SFX_Death.wav",
+                    "duration_s": 0.50,
+                    "tags": ["death", "fail", "descending"],
+                    "description": "Descending sweep for player death / fail state.",
+                    "default_volume": 0.7
+                },
+                {
+                    "name": "SFX_Explosion",
+                    "file": "SFX_Explosion.wav",
+                    "duration_s": 0.70,
+                    "tags": ["explosion", "boom", "impact"],
+                    "description": "Low boom with noise tail for explosions / destruction.",
+                    "default_volume": 0.85
+                }
+            ]
+        },
+        {
+            "id": "music",
+            "label": "Music Loops",
+            "icon_color": "#6ca0d8",
+            "assets": [
+                {
+                    "name": "Music_MenuLoop",
+                    "file": "Music_MenuLoop.wav",
+                    "duration_s": 4.00,
+                    "tags": ["music", "loop", "ambient", "menu"],
+                    "description": "4-second C-major ambient loop, good for menus and title screens. Seamless loop.",
+                    "default_volume": 0.5,
+                    "is_loop": true
+                }
+            ]
+        }
+    ],
+    "license_notes": [
+        "All placeholder assets are procedurally synthesized (sine waves, filtered noise) and released CC0 / Public Domain.",
+        "These are intentionally minimal stand-ins. Production games should replace with curated or licensed SFX.",
+        "Replace this catalog by curating assets from: freesound.org (CC licenses), opengameart.org (CC / CC-BY), kenney.nl (CC0)."
+    ]
+}

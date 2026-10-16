@@ -1,0 +1,168 @@
+{
+    "version": 1,
+    "schema_notes": "Catalog of curated 3D mesh + material packs. Each card's 'prompt' field is pre-filled into chat on click, the AI then guides the user through download, import, and optional material setup. Optional 'preview_image' field points to a local PNG/JPG under Resources/AssetPacks/previews/ (rendered as thumbnail). Optional 'download_url' is the direct HTTP link to the asset file/zip for automatic download via fetch + unreal import.",
+    "default_import_folder": "/Game/LocoAI/Meshes",
+    "sources": {
+        "kenney": "https://kenney.nl/assets?filter=3d",
+        "quixel": "https://www.fab.com/sellers/Quixel",
+        "polyhaven": "https://polyhaven.com/models",
+        "ambient_cg": "https://ambientcg.com/list",
+        "ue_marketplace_free": "https://www.unrealengine.com/marketplace/en-US/free",
+        "sketchfab_cc0": "https://sketchfab.com/features/free-3d-models?features=downloadable&licenses=322a749bcfa841b29dff1e8a1bb74b0b"
+    },
+    "categories": [
+        {
+            "id": "environment",
+            "label": "Environment, props & kits",
+            "icon_color": "#6b9f5a",
+            "assets": [
+                {
+                    "name": "Kenney, Nature Kit",
+                    "source": "Kenney.nl",
+                    "license": "CC0",
+                    "format": "FBX",
+                    "asset_count": "~50 meshes",
+                    "tags": ["kenney", "low-poly", "trees", "rocks", "nature", "CC0"],
+                    "description": "50+ stylized low-poly nature assets (trees, bushes, rocks, flowers). Zero-attribution CC0. Great for prototyping outdoor scenes.",
+                    "prompt": "Help me download Kenney's 'Nature Kit' and batch-import it into my project.\n\nSteps:\n1. Open https://kenney.nl/assets/nature-kit in a browser.\n2. Download the ZIP (CC0, no attribution required).\n3. Extract to a temp folder, contains FBX files under /Models/.\n4. Use execute_python with unreal.AssetToolsHelpers.get_asset_tools().import_asset_tasks() to batch import every .fbx in the folder into /Game/LocoAI/Meshes/NatureKit/.\n5. Apply a basic lit Master Material to each, OR use the PBR textures included in /Textures/.\n6. Report how many meshes were imported."
+                },
+                {
+                    "name": "Kenney, Platformer Kit",
+                    "source": "Kenney.nl",
+                    "license": "CC0",
+                    "format": "FBX",
+                    "asset_count": "~60 meshes",
+                    "tags": ["kenney", "platformer", "cubes", "low-poly", "CC0"],
+                    "description": "Modular platformer blocks, stairs, ramps, cubes with different tops (grass, dirt, sand, snow). Snaps together for rapid level blockout.",
+                    "prompt": "Help me download Kenney's 'Platformer Kit' pack and batch-import the meshes.\n\nSteps:\n1. https://kenney.nl/assets/platformer-kit, download ZIP.\n2. Extract locally.\n3. Batch import every .fbx under /Models/ into /Game/LocoAI/Meshes/PlatformerKit/.\n4. Each cube is ~1m so they snap to UE's default 100 grid.\n5. Report the imported assets."
+                },
+                {
+                    "name": "Quixel Megascans (via Fab)",
+                    "source": "Fab by Epic Games",
+                    "license": "Free with Epic Games account (UE EULA)",
+                    "format": "Megascans asset",
+                    "asset_count": "10,000+ photoreal scans",
+                    "tags": ["megascans", "photoreal", "quixel", "pbr"],
+                    "description": "Massive photoreal library, rocks, debris, foliage, surfaces. Completely free with an Epic account since Quixel joined Epic.",
+                    "prompt": "Walk me through using Fab (ex-Quixel Bridge) to add a photoreal asset to my project.\n\nSteps:\n1. Open Epic Games Launcher → Fab (or https://www.fab.com/) signed in with Epic account.\n2. Filter by 'Megascans' and 'Free'.\n3. Pick a sample asset, e.g., 'Moss Rock' or a ground surface.\n4. Click 'Add to My Library' then 'Send to Unreal Engine'.\n5. The asset lands under /Game/Megascans/ in my project.\n6. Confirm it's there and suggest a material I should apply."
+                }
+            ]
+        },
+        {
+            "id": "props",
+            "label": "Props, weapons / items / pickups",
+            "icon_color": "#d9a458",
+            "assets": [
+                {
+                    "name": "Kenney, Weapon Pack",
+                    "source": "Kenney.nl",
+                    "license": "CC0",
+                    "format": "FBX",
+                    "asset_count": "30+ weapons",
+                    "tags": ["kenney", "weapons", "sword", "axe", "gun", "CC0"],
+                    "description": "Melee + ranged weapons, swords, axes, shields, bows, guns. Low-poly, handled-proportioned.",
+                    "prompt": "Download Kenney's weapon pack and import.\n\nSteps:\n1. https://kenney.nl/assets (search 'weapon'). Likely pack: 'Medieval Weapons Kit' or 'Guns'.\n2. Download ZIP.\n3. Extract.\n4. Batch import .fbx files into /Game/LocoAI/Meshes/Weapons/.\n5. Report which weapons imported and suggest how to attach one to my ThirdPersonCharacter's right hand via a SkeletalMeshSocket."
+                },
+                {
+                    "name": "Kenney, Food Kit",
+                    "source": "Kenney.nl",
+                    "license": "CC0",
+                    "format": "FBX",
+                    "asset_count": "40 food items",
+                    "tags": ["kenney", "food", "pickups", "consumable", "CC0"],
+                    "description": "Cute food items, apples, bread, cheese, etc. Perfect for collectibles in survival/cooking games.",
+                    "prompt": "Download Kenney's 'Food Kit' and set up one item (e.g. an apple) as a pickup using add_pickup_template.\n\nSteps:\n1. https://kenney.nl/assets/food-kit, download ZIP.\n2. Extract.\n3. Import apple.fbx into /Game/LocoAI/Meshes/Food/Apple.\n4. Create /Game/Blueprints/BP_Apple (Actor) using add_pickup_template with the apple mesh + a sphere collision + counter_variable='Apples' on BP_ThirdPersonCharacter.\n5. Confirm the pickup works in PIE."
+                },
+                {
+                    "name": "PolyHaven Models",
+                    "source": "PolyHaven.com",
+                    "license": "CC0",
+                    "format": "FBX / GLB",
+                    "asset_count": "200+ high-quality",
+                    "tags": ["polyhaven", "CC0", "photoreal", "pbr"],
+                    "description": "Photoreal CC0 models with full PBR textures. Higher poly than Kenney but stunning quality.",
+                    "prompt": "Guide me through downloading a PolyHaven model (e.g., a wooden chair or barrel) and importing with full PBR textures.\n\nSteps:\n1. Open https://polyhaven.com/models.\n2. Pick any CC0 model (they're all CC0).\n3. Download FBX + all textures (BaseColor, Normal, Roughness, Metallic, AO).\n4. Extract locally.\n5. Import the mesh to /Game/LocoAI/Meshes/PolyHaven/<name>.\n6. Import each texture as Texture2D, set correct compression settings (sRGB only on BaseColor, Masks for Roughness/Metallic/AO).\n7. Create a Material Instance from my project's base PBR material, wire the 5 textures.\n8. Assign the Material Instance to the mesh."
+                }
+            ]
+        },
+        {
+            "id": "characters",
+            "label": "Characters, skeletal meshes",
+            "icon_color": "#c38fd9",
+            "assets": [
+                {
+                    "name": "UE5 Manny & Quinn",
+                    "source": "Epic (bundled in Third Person template)",
+                    "license": "Free (UE EULA)",
+                    "format": "Skeletal Mesh",
+                    "asset_count": "2 characters",
+                    "tags": ["mannequin", "ue5", "biped"],
+                    "description": "Default UE5 mannequins (Manny + Quinn) with modular skeleton support. Already in your project if you used the ThirdPerson template.",
+                    "prompt": "Check if /Game/Characters/Mannequins/Meshes/ already has Manny/Quinn (they come with the UE5 ThirdPerson template).\n\nIf yes: list the paths.\nIf no: tell me how to add the ThirdPerson feature pack from the New Project Settings."
+                },
+                {
+                    "name": "Mixamo Free Characters",
+                    "source": "Mixamo",
+                    "license": "Free (Adobe account)",
+                    "format": "FBX skeletal",
+                    "asset_count": "~60 rigged characters",
+                    "tags": ["mixamo", "character", "rigged"],
+                    "description": "Rigged human characters, Y-Bot, X-Bot, plus 60+ stylized humans ready for animation retargeting.",
+                    "prompt": "Help me grab a free rigged character from Mixamo and import it with auto-rigged skeleton.\n\nSteps:\n1. https://www.mixamo.com/ → sign in.\n2. Browse 'Characters' tab and pick one (e.g., Y-Bot, Mannequin, or a stylized human).\n3. Download: Format=FBX for Unreal, Pose=T-Pose, Skin=With Skin.\n4. Import the .fbx at /Game/LocoAI/Characters/Mixamo/<name>/.\n5. UE imports the SkeletalMesh + Skeleton.\n6. Set up an IK Retargeter from the Mixamo skeleton to UE5 Mannequin so I can reuse existing animations."
+                }
+            ]
+        },
+        {
+            "id": "materials",
+            "label": "Materials, PBR & surfaces",
+            "icon_color": "#6ca0d8",
+            "assets": [
+                {
+                    "name": "AmbientCG Free PBR",
+                    "source": "AmbientCG.com",
+                    "license": "CC0",
+                    "format": "PBR textures (Albedo/Normal/Roughness/Metallic/AO)",
+                    "asset_count": "1500+ surfaces",
+                    "tags": ["ambientcg", "pbr", "CC0", "texture"],
+                    "description": "Huge CC0 library of tiling PBR surfaces, wood, metal, stone, fabric, concrete, more. 1-4K resolution.",
+                    "prompt": "Guide me through downloading a tiling PBR surface from AmbientCG and building a UE Material from it.\n\nSteps:\n1. Open https://ambientcg.com/list (or a specific URL I provide).\n2. Pick a surface (e.g., 'Wood028').\n3. Download the 1K ZIP.\n4. Extract, contains Color, Normal, Roughness, AO, Metalness (if applicable) at 1024x1024.\n5. Import each as Texture2D at /Game/LocoAI/Materials/<name>/.\n6. Set compression: Color=sRGB, Normal=TC_Normalmap, Roughness/AO/Metalness=TC_Masks (sRGB OFF).\n7. Create a Material /Game/LocoAI/Materials/M_<name> with BaseColor, Normal, Roughness, AO (+ Metallic if applicable) wired.\n8. Apply to a test plane and confirm it renders correctly."
+                },
+                {
+                    "name": "PolyHaven Textures",
+                    "source": "PolyHaven",
+                    "license": "CC0",
+                    "format": "PBR textures",
+                    "asset_count": "800+ surfaces",
+                    "tags": ["polyhaven", "pbr", "CC0", "photoreal"],
+                    "description": "Premium CC0 tiling PBR textures at up to 16K. Photoreal quality, rivals paid libraries.",
+                    "prompt": "Download a PBR texture set from PolyHaven and build a UE Material.\n\nSteps same as AmbientCG flow but use https://polyhaven.com/textures → filter CC0 → pick 2K resolution.\nImport into /Game/LocoAI/Materials/PolyHaven/<name>/ and wire into a new Material."
+                }
+            ]
+        },
+        {
+            "id": "vehicles",
+            "label": "Vehicles",
+            "icon_color": "#d97757",
+            "assets": [
+                {
+                    "name": "Kenney, Car Kit",
+                    "source": "Kenney.nl",
+                    "license": "CC0",
+                    "format": "FBX",
+                    "asset_count": "~12 vehicles",
+                    "tags": ["kenney", "vehicle", "car", "CC0"],
+                    "description": "Low-poly stylized cars, sedan, sports, truck, taxi. Modular wheels for rigging.",
+                    "prompt": "Download Kenney's 'Car Kit' pack and import.\n\nSteps:\n1. https://kenney.nl/assets, search 'car'. Likely: 'Car Kit' or 'City Kit: Roads'.\n2. Download ZIP.\n3. Extract.\n4. Batch import .fbx into /Game/LocoAI/Meshes/Vehicles/.\n5. Optionally, guide me through wiring one into a WheeledVehiclePawn using the imported wheel meshes."
+                }
+            ]
+        }
+    ],
+    "legal_notes": [
+        "CC0 assets have no attribution requirement and can be used in commercial games.",
+        "UE Marketplace free assets are governed by the UE EULA, free for use in UE projects.",
+        "Quixel Megascans via Fab are free with an Epic Games account and covered under the UE EULA for use in UE projects.",
+        "Mixamo character + animations require an Adobe account and usage is covered under Adobe's Mixamo terms (free for commercial and non-commercial).",
+        "PolyHaven, AmbientCG, and Kenney are CC0, do whatever you want, attribution appreciated but not required.",
+        "Always keep the license file with any downloaded asset to preserve provenance."
+    ]
+}

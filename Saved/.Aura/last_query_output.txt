@@ -1,0 +1,45 @@
+Top file paths:
+C:/Users/Equipo/Documents/Unreal Projects/MyProject7/Content/ThirdPerson/Blueprints/WBP_VictoryMenu.uasset
+
+
+
+File: Content_ThirdPerson_Blueprints_WBP_VictoryMenu_uasset
+Relevance Score: 1.7599
+
+
+
+asset_path: /Game/ThirdPerson/Blueprints/WBP_VictoryMenu.WBP_VictoryMenu
+
+referencers:
+  [
+  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter",
+  "/Game/ThirdPerson/Blueprints/BP_ThirdPersonPlayerController"
+]
+
+dependencies:
+  [
+  "/Script/SlateCore",
+  "/Script/UMGEditor",
+  "/Script/UMG"
+]
+
+content: asset path:
+/Game/ThirdPerson/Blueprints/WBP_VictoryMenu.WBP_VictoryMenu
+blueprint info:
+WBP_VictoryMenu
+/Game/ThirdPerson/Blueprints/WBP_VictoryMenu.WBP_VictoryMenu
+WBP_VictoryMenu_C
+/Game/ThirdPerson/Blueprints/WBP_VictoryMenu
+UserWidget
+
+
+function info:
+
+Functions:
+ShowVictory
+
+
+
+
+
+
